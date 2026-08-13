@@ -62,3 +62,18 @@ const [color1, color2, color3]=arr;
 
 console.log(color1, color2, color3);
 
+//async, await, promise, resolve
+function delay(){
+    return new Promise(resolve=>{
+        setTimeout(resolve, 3000);
+    })
+}
+
+async function run(){
+    console.log("task 1 completed!");
+    delay();
+    //following function gets fired after 3 seconds
+    console.log("task 2 completed!");
+}
+run();
+
