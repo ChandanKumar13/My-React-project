@@ -47,3 +47,18 @@ const marks=[10,20,30,50];
 const filteredMarks=marks.filter(n=>n>20);
 console.log(filteredMarks);
 
+const student={
+    name:"John", 
+    age=23, 
+    course="Btech"
+}
+
+const {user_name, user_age, user_course}=student;
+console.log(user_name, user_age, user_course);
+
+//array destructuring
+const arr=["red", "blue", "pink"];
+const [color1, color2, color3]=arr;
+
+console.log(color1, color2, color3);
+
