@@ -77,3 +77,30 @@ async function run(){
 }
 run();
 
+delay().then(()=>{
+        console.log("Fired after 3 seconds");
+    }
+)
+
+const delayedBy=(ms)=>new Promise(resolve=>setTimeout(resolve, ms));
+delayedBy(6000);
+
+//shallow copy
+const original={a:1, nested:{b:2}};
+const copied={...original};
+console.log(copied.nested.b);
+
+//deep copy
+const obj={
+    a:1,
+    nested:{l:3}, 
+    fn:()=>{}, 
+    date:new Date(),
+};
+
+const deep=JSON.parse(JSON.stringify(obj));
+
+//in case of referencing to the value of an object inside an object, refer to the original object
+console.log(original.nested.l);
+console.log(deep.fn);
+console.log(typeof(deep.date));
