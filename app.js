@@ -104,3 +104,29 @@ const deep=JSON.parse(JSON.stringify(obj));
 console.log(original.nested.l);
 console.log(deep.fn);
 console.log(typeof(deep.date));
+
+//some mathematical stuff
+alert(String(Math.truncate(Number("89"))));
+
+let user={
+    name:"John", 
+    age:25, 
+}
+
+user.jobRole="Developer";
+for(let prop in user){
+    console.log(prop);
+    console.log(user[prop]);
+}
+
+let codes = { "49": "Germany", "41": "Switzerland", "1": "USA" };
+for(let code in codes) console.log(+code);
+
+//creating an empty object
+let user1={};
+user1.name="Karl";
+user1.surname="Marx";
+user1.name="Benn";
+
+delete user1.name;
+
