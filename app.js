@@ -6,7 +6,7 @@ function myComponent(){
     );
 }
 
-export default function myApp(){    
+export function myApp(){    
     return(
         <div>
             <h1>
@@ -130,3 +130,38 @@ user1.name="Benn";
 
 delete user1.name;
 
+//task 2
+let schedule={};
+alert(schedule.isEmpty());
+
+schedule["getUpTime"]="7:10";
+alert(schedule.isEmpty());
+
+//task 3 
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+};
+
+// to check the presence of keys
+function isEmpty(){
+    for(let salary in salaries)return false;
+    return true;
+}
+
+let values=Object.values(salaries);
+
+if(Object.keys(salaries).length===0){
+    console.log("no salaries recorded yet!");
+}else{
+    let sum=salaries.John+salaries.Ann+salaries.Pete;
+    for(let salary in salaries)sum+=salary;
+    console.log(sum);
+}
+
+const sum=values.reduce((acc, curr)=>acc+curr, 0);
+
+export default defineConfig((
+    plugins:[react(), tailwindcss()]
+));
