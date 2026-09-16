@@ -162,6 +162,5 @@ if(Object.keys(salaries).length===0){
 
 const sum=values.reduce((acc, curr)=>acc+curr, 0);
 
-export default defineConfig((
-    plugins:[react(), tailwindcss()]
-));
+
+
